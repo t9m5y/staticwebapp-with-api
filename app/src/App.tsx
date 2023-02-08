@@ -9,7 +9,8 @@ function App() {
 
   const getDataFromApi = async(e: any)=>{
     e.preventDefault();
-    const data = await fetch(`/api/hello?name=${name}`);
+    // const data = await fetch(`/api/hello?name=${name}`);
+    const data = await fetch(`https://helloex.azurewebsites.net/api/hello?name=${name}`);
     const json = await data.json();
 
     if (json.message){
